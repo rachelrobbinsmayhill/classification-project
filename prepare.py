@@ -20,36 +20,14 @@ def prep_telco(df):
 
 
 
-def describe_data(df):
-
-    print('---value counts---')
-    print(df.churn.value_counts())
-    print('---shape---')
-    print('{} rows and {} columns'.format(df.shape[0], df.shape[1]))
-    print(df.info())
-    print(df.describe())
-    print('--nulls--')
-    df = df.replace(r'^\s*$', np.NaN, regex=True)
-    print(df.isna().sum())
-
-
-
-
-
-
-
-
 def summerize_df(df):
-    
     '''
     This function takes in a dataframe and summarizes the data in preparation for cleaning. 
     It uses .shape() to provide the number of rows and columns; .info() which in includes the 
     index as well as the Series names, null values, and datatypes; .describe() which provides 
     the summary statistics. It then provide a new dataframe, replacing empty spaces with NaN values, 
     then gets a count of the NaN values for each Sereis. 
-    '''    
-    
-    
+    '''  
     print('-----shape------')
     print('{} rows and {} columns'.format(df.shape[0], df.shape[1]))
     print('---info---')
@@ -61,15 +39,24 @@ def summerize_df(df):
 
 
 
-def train_validate_test_split(df, target, seed=123):
+    
+def train_validate_test_split(df, seed=123):
+     '''
+    This function splits a dataframe into train, validate, and test 
+    in order to create and validate models. It takes in a dataframe 
+    and contains an integer for a setting a seed.  The name of the target 
+    variable (for stratification purposes), is included inside the function. 
+    Test is 20% of the original dataset. The remaining 80% of the dataset is 
+    divided between valiidate and train, with validate being .30*.80= 24% of 
+    the original dataset, and train being .70*.80= 56% of the original dataset. 
+    The function returns, train, validate and test dataframes. 
     '''
-    This function takes in a dataframe, the name of the target variable
-    (for stratification purposes), and an integer for a setting a seed
-    and splits the data into train, validate and test. 
-    Test is 20% of the original dataset, validate is .30*.80= 24% of the 
-    original dataset, and train is .70*.80= 56% of the original dataset. 
-    The function returns, in this order, train, validate and test dataframes. 
-    '''
+    train_validate, test = train_test_split(df, test_size=0.2,
+        random_state=19, stratify=df.churn)
+    train, validate = train_test_split(train_validate, test_size=0.25,
+        random_state=19, stratify=train_validate.churn)
+
+    return train, validate, test
     train_validate, test = train_test_split(df, test_size=0.2, 
                                             random_state=seed, 
                                             stratify=df[target])
