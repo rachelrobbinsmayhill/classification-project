@@ -1,4 +1,4 @@
-Classification Project - Telco Churn 
+Classification Project - Telco Churn
 Codeup - Innis Cohort - March 2022
 
 
@@ -12,12 +12,12 @@ The goal of this project is to identify key drivers of churn for Telco, a teleco
 
 #### 2. DESCRIPTION:
 
-With an ever-competitive telecommunications market, it is vital to understand your customer base in order to prevent customer churn and maximize retention.  It is far less expensive to keep an existing customer than it is to acquire a new one for the long term when marketing costs are included. Therefore, it is important to identify drivers of churn in an effort to prevent attrition; thus, retaining current customers for the long term.  Ultimately, customer retention is important for maintaining and increasing profit.  This project will identify key drivers of churn for the Telco dataset and use modeling and statistics to identify ways to prevent churn in the future. Ultimately it will provide a recommendation that could be used by Telco or other customer-based service companies to maximize retention. 
+With an ever-competitive telecommunications market, it is vital to understand your customer base in order to prevent customer churn and maximize retention.  It is far less expensive to keep an existing customer than it is to acquire a new one for the long term when marketing costs are included. Therefore, it is important to identify drivers of churn in an effort to prevent attrition; thus, retaining current customers for the long term.  Ultimately, customer retention is important for maintaining and increasing profit.  This project will identify key drivers of churn for the Telco dataset and use modeling and statistics to identify ways to prevent churn in the future. Ultimately it will provide a recommendation that could be used by Telco or other customer-based service companies to maximize retention.
 
 
-### INITIAL QUESTIONS: 
+### INITIAL QUESTIONS:
 
-The focus of the project is on decreasing customer churn and increasing retention, which can have a significant impact on revenue and entity reputation. Below are some of the initial questions this project looks to answer throughout the Data Science Pipeline. 
+The focus of the project is on decreasing customer churn and increasing retention, which can have a significant impact on revenue and entity reputation. Below are some of the initial questions this project looks to answer throughout the Data Science Pipeline.
 
 ##### Data-Focused Questions
 
@@ -47,8 +47,8 @@ Draft Jupyter Notebook - provides all steps taken to produce the project.
 Python Module File - provides reproducible code for acquiring,  preparing, exploring, & testing the data.
 acquire.py - used to acquire data
 prepare.py - used to prepare data
-Report Jupyter Notebook - provides final presentation-ready assessment and recommendations. 
-.csv File - provides primary data used to make predictions & recommendations. 
+Report Jupyter Notebook - provides final presentation-ready assessment and recommendations.
+.csv File - provides primary data used to make predictions & recommendations.
 
 
 
@@ -58,7 +58,7 @@ Report Jupyter Notebook - provides final presentation-ready assessment and recom
 
 ## DATA DICTIONARY:
 
-The final DataFrame used to explore the data for this project contains the following variables (columns).  The values of the Features, as well as their data types, are defined below: 
+The final DataFrame used to explore the data for this project contains the following variables (columns).  The values of the Features, as well as their data types, are defined below:
 
 |   Series / Column Name   |   Data Type   |    Description    |
 
@@ -83,7 +83,7 @@ Create questions related to the project
 Create questions related to the data
 Create a plan for completing the project using the data science pipeline
 Create data dictionary to define variables and data context
-Draft starting hypothesis 
+Draft starting hypothesis
 
 #### 2. Acquisition
 
@@ -110,17 +110,17 @@ prepare.py - used to prepare data
 
 
 
-## V. REPRODUCIBILITY: 
-	
+## V. REPRODUCIBILITY:
+
 ### Steps to Reproduce
 
-You will need an env.py file that contains the hostname, username, and password of the mySQL database that contains the telco_churn database. 
+You will need an env.py file that contains the hostname, username, and password of the mySQL database that contains the telco_churn database.
 
 Store that env file locally in the repository.
 
 Make .gitignore and confirm .gitignore is hiding your env.py file.
 
-Clone my repo (including the acquire.py and prepare.py) 
+Clone my repo (including the acquire.py and prepare.py)
 
 Import python libraries:  pandas, matplotlib, seaborn, numpy, and sklearn.
 
