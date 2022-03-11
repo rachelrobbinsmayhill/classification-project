@@ -48,17 +48,6 @@ def get_telco_data(use_cache=True):
 
 
 
-def describe_data(df):
-
-    print('---value counts---')
-    print(df.churn.value_counts())
-    print('---shape---')
-    print('{} rows and {} columns'.format(df.shape[0], df.shape[1]))
-    print(df.info())
-    print(df.describe())
-    print('--nulls--')
-    df = df.replace(r'^\s*$', np.NaN, regex=True)
-    print(df.isna().sum())
 
 
 
