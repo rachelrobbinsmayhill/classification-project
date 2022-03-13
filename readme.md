@@ -12,16 +12,16 @@ Table of Contents
 [3. Initial Questions](#3initial-questions)<br>
 [4. Formulating Hypotheses](#4-formulating-hypotheses)<br>
 [5. Deliverables](#5-deliverables)<br>
-* II. [Data Context](#ii-data-context)<br>
+* II. [Project Data Context](#ii-data-context)<br>
 [1. Data Dictionary](#1-data-dictionary)<br>
-* III. [Data Science Pipeline Process](#iii-data-science-pipeline-process)<br>
+* III. [Project Plan - Data Science Pipeline](#iii-data-science-pipeline-process)<br>
 [1. Project Planning](#1-plan)<br>
 [2. Data Acquisition](#2-acquire)<br>
 [3. Data Preparation](#3-prepare)<br>
 [4. Data Exploration](#4explore)<br>
 [5. Modeling & Evaluation](#5-model--evaluate)<br>
 [6. Product Delivery](#6-delivery)<br>
-* IV. [Modules](#iv-modules)<br>
+* IV. [Project Modules](#iv-modules)<br>
 * V. [Project Reproduction](#v-reproducibility)<br>
  
  
@@ -77,7 +77,7 @@ The focus of the project is on decreasing customer churn and increasing retentio
 - [x] 5 minute presentation to stakeholders
  
  
-## II. DATA CONTEXT
+## II. PROJECT DATA CONTEXT
  
 #### 1. DATA DICTIONARY:
 The final DataFrame used to explore the data for this project contains the following variables (columns).  The variables, along with their data types, are defined below:
@@ -116,7 +116,7 @@ payment_type_Electronic check     |        boolean int. (0, 1)  | payment type i
 payment_type_Mailed check       |          boolean int. (0, 1)  | payment type is or was check via post, 0= no, 1=yes |
  
  
-## III. DATA SCIENCE PIPELINE PROCESS:
+## III. PROJECT PLAN - USING THE DATA SCIENCE PIPELINE:
 The following outlines the process taken through the Data Science Pipeline to complete this project. 
  
 Plan➜ Acquire ➜ Prepare ➜ Explore ➜ Model & Evaluate ➜ Deliver
@@ -197,13 +197,13 @@ Using Jupyter Notebook:
 
  
  
-## IV. MODULES:
+## IV. PROJECT MODULES:
 - [x] Python Module Files - provide reproducible code for acquiring,  preparing, exploring, & testing the data.
    - [x] acquire.py - used to acquire data
    - [x] prepare.py - used to prepare data
  
   
-## V. REPRODUCIBILITY:
+## V. PROJECT REPRODUCTION:
 ### Steps to Reproduce
  
 - [x] You will need an env.py file that contains the hostname, username, and password of the mySQL database that contains the telco_churn database
