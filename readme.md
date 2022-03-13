@@ -49,20 +49,20 @@ The focus of the project is on decreasing customer churn and increasing retentio
 
 #### 4. Formulating hypotheses
 - Is month-to-month customer churn related to Fiber Optic Internet Service?
--- H0: The churn rate of Month to month customers who have fiber optic internet <= the churn rate of all customers who have fiber optic internet.
--- H1: The churn rate of Month to month customers who have fiber optic internet > the churn rate of all customers who have fiber optic internet.
++ [`H0: The churn rate of Month to month customers who have fiber optic internet <= the churn rate of all customers who have fiber optic internet.
++ [`H1: The churn rate of Month to month customers who have fiber optic internet > the churn rate of all customers who have fiber optic internet.
 
 
 
 #### 5. DELIVERABLES:
--[] README file - provides an overview of the project and steps for project reproduction.  
--[] Draft Jupyter Notebook - provides all steps taken to produce the project.
--[] Python Module File - provides reproducible code for acquiring,  preparing, exploring, & testing the data.
--[] acquire.py - used to acquire data
--[] prepare.py - used to prepare data
--[] Report Jupyter Notebook - provides final presentation-ready assessment and recommendations. 
--[] .csv File - provides primary data used to make predictions & recommendations. 
--[] 5 minute presentation to stakeholders
+- [x] README file - provides an overview of the project and steps for project reproduction.  
+- [x] Draft Jupyter Notebook - provides all steps taken to produce the project.
+- [x] Python Module File - provides reproducible code for acquiring,  preparing, exploring, & testing the data.
+- [x] acquire.py - used to acquire data
+- [x] prepare.py - used to prepare data
+- [x] Report Jupyter Notebook - provides final presentation-ready assessment and recommendations. 
+- [x] .csv File - provides primary data used to make predictions & recommendations. 
+- [x] 5 minute presentation to stakeholders
 
 
 ## II. DATA CONTEXT
@@ -112,32 +112,32 @@ The following outlines the process taken through the Data Science Pipeline to co
 Plan➜ Acquire ➜ Prepare ➜ Explore ➜ Model & Evaluate ➜ Deliver
 
 #### 1. PLAN
--[] Review project expectations
--[] Draft project goal to include measures of success
--[] Create questions related to the project
--[] Create questions related to the data
--[] Create a plan for completing the project using the data science pipeline
--[] Create a data dictionary to define variables and data context
--[] Draft starting hypothesis 
+- [x]  Review project expectations
+- [x] Draft project goal to include measures of success
+- [x]  Create questions related to the project
+- [x]  Create questions related to the data
+- [x] Create a plan for completing the project using the data science pipeline
+- [x] Create a data dictionary to define variables and data context
+- [x] Draft starting hypothesis 
 
 
 #### 2. ACQUIRE
--[] Create .gitignore
--[] Create env file with log-in credentials
--[] Store env file in .gitignore to ensure security of sensitive data
--[] Create acquire.py module
--[] Store functions needed to acquire the Telco dataset from mySQL
--[] Ensure all imports needed to run the functions are inside the acquire.py document
--[] Using Jupyter Notebook
--[] Run all required imports
--[] Import functions from aquire.py module
--[] Summarize dataset using methods and document observations
+- [x]  Create .gitignore
+- [x]  Create env file with log-in credentials
+- [x]  Store env file in .gitignore to ensure security of sensitive data
+- [x]  Create acquire.py module
+- [x]  Store functions needed to acquire the Telco dataset from mySQL
+- [x]  Ensure all imports needed to run the functions are inside the acquire.py document
+- [x] Using Jupyter Notebook
+- [x]  Run all required imports
+- [x] Import functions from aquire.py module
+- [x]  Summarize dataset using methods and document observations
 
 #### 3. PREPARE
--[] Create prepare.py module
--[] Store functions needed to prepare the Telco data such as:
-    -[] Split Function: to split data into train, validate, and test
-    -[] Cleaning Function: to clean data for exploration
+- [x] Create prepare.py module
+- [x] Store functions needed to prepare the Telco data such as:
+    - [x] Split Function: to split data into train, validate, and test
+    - [x] Cleaning Function: to clean data for exploration
 Encoding Function: to create numeric columns for object column
 Feature Engineering Function: to create new features
 Ensure all imports needed to run the functions are inside the prepare.py document
