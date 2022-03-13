@@ -33,14 +33,11 @@ Table of Contents
 The goal of this project is to identify key drivers of churn for Telco, a telecommunications company, and make recommendations to reduce churn in order to increase customer retention, and ultimately increase revenue. Churn is another term for attrition and is represented by the percentage of customers who stop doing business with the company. Through machine learning and statistical analysis, predictions of future churn will be identified and recommendations for prevention will be made in order to improve customer retention.
  
  
- 
 #### 2. DESCRIPTION:
- 
 With an ever-competitive telecommunications market, it is vital to understand your customer base in order to prevent customer churn and maximize retention.  It is far less expensive to keep an existing customer than it is to acquire a new one for the long term when marketing costs are included. Therefore, it is important to identify drivers of churn in an effort to prevent attrition. Thus, retaining current customers for the long term.  Ultimately, customer retention is important for maintaining and increasing profit.  This project will identify key drivers of churn for the Telco dataset and use modeling and statistics to identify ways to prevent churn in the future. Ultimately it will provide a recommendation that could be used by Telco or other customer-based service companies to maximize retention.
  
  
 #### 3.INITIAL QUESTIONS:
- 
 The focus of the project is on decreasing customer churn and increasing retention, which can have a significant impact on revenue and entity reputation. Below are some of the initial questions this project looks to answer throughout the Data Science Pipeline.
  
 ##### Data-Focused Questions
@@ -62,11 +59,11 @@ The focus of the project is on decreasing customer churn and increasing retentio
 - What is my MVP?
 - How will I know it's good enough?
  
+
 #### 4. FORMULATING HYPOTHESES
 - Is month-to-month customer churn related to Fiber Optic Internet Service?
    + H0: The churn rate of Month to month customers who have fiber optic internet <= the churn rate of all customers who have fiber optic internet.
    + H1: The churn rate of Month to month customers who have fiber optic internet > the churn rate of all customers who have fiber optic internet.
- 
  
  
 #### 5. DELIVERABLES:
@@ -83,7 +80,6 @@ The focus of the project is on decreasing customer churn and increasing retentio
 ## II. DATA CONTEXT
  
 #### 1. DATA DICTIONARY:
- 
 The final DataFrame used to explore the data for this project contains the following variables (columns).  The variables, along with their data types, are defined below:
  
  
@@ -134,7 +130,6 @@ Plan➜ Acquire ➜ Prepare ➜ Explore ➜ Model & Evaluate ➜ Deliver
 - [x] Create a data dictionary to define variables and data context
 - [x] Draft starting hypothesis
  
- 
 #### 2. ACQUIRE
 - [x]  Create .gitignore
 - [x]  Create env file with log-in credentials
@@ -148,13 +143,13 @@ Plan➜ Acquire ➜ Prepare ➜ Explore ➜ Model & Evaluate ➜ Deliver
 - [x]  Summarize dataset using methods and document observations
  
 #### 3. PREPARE
+Using Python Scripting Program (VS Code)
 - [x] Create prepare.py module
 - [x] Store functions needed to prepare the Telco data such as:
    - [x] Split Function: to split data into train, validate, and test
    - [x] Cleaning Function: to clean data for exploration
    - [x] Encoding Function: to create numeric columns for object column
    - [x] Feature Engineering Function: to create new features
- 
 - [x] Ensure all imports needed to run the functions are inside the prepare.py document
 Using Jupyter Notebook
 - [x] Import functions from prepare.py module
@@ -166,12 +161,17 @@ Using Jupyter Notebook
 - [x] Address missing values, data errors, unnecessary data, renaming
 - [x] Split data into train, validate, and test samples
  
- 
 #### 4.EXPLORE
- 
+ - [x]
+ - [x]
+ - [x]
+ - [x]
+ - [x]
+ - [x]
+ - [x]
  
 #### 5. MODEL & EVALUATE
-In Jupyter Notebook:
+Using Jupyter Notebook:
 - [x] Establish baseline accuracy
 - [x] Train and fit multiple (3+) models with varying algorithms and/or hyperparameters
 - [x] Compare evaluation metrics across models
@@ -182,19 +182,21 @@ In Jupyter Notebook:
 - [x] Summarize performance
 - [x] Interpret and document findings
  
- 
 #### 6. DELIVERY
- 
+ - [x]
+ - [x]
+ - [x]
+ - [x]
+ - [x]
+ - [x]
  
  
 ## IV. MODULES:
- 
 - [x] Python Module Files - provide reproducible code for acquiring,  preparing, exploring, & testing the data.
    - [x] acquire.py - used to acquire data
    - [x] prepare.py - used to prepare data
  
- 
- 
+  
 ## V. REPRODUCIBILITY:
 ### Steps to Reproduce
  
