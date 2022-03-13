@@ -92,34 +92,34 @@ The final DataFrame used to explore the data for this project contains the follo
 |  Variables             |    Data Type                                |    Definition             |
 | :--------------------:   | :----------------------------------------: | :--------------------: |
 customer_id           |               object             | unique identifier for each customer |  
-is_senior                |                 integer (whole number)	|  senior citizen (65+), 0= no, 1=yes| 
-tenure_months       |                      integer (whole number)	| length of customer service in months|
+is_senior                |                 integer (whole #)	|  senior citizen (65+), 0= no, 1=yes| 
+tenure_months       |                      integer (whole #)	| length of customer service in months|
 monthly_charges     |                    float (decimal)	| current monthly charges in USD |
 total_charges            |               float (decimal)	| sum of all charges for tenure in USD |
 contract_type             |               object	| type of contract customer signed: month-to-month, One year, Two year|
 internet_service_type |               object	| type of internet service customer has or had: Fiber optic, DSL, None|	
 payment_type |   object	| type of payment method customer uses or used: Electronic check, Mailed check, Bank transfer (automatic), Credit card (automatic) |
-is_male_Male         |   integer ( boolean 0,1)	| binary gender identity 0= male, 1=female|  	
-has_partner_Yes    |                       integer ( boolean 0,1)	| has spouse, partner, or significant other, 0= no, 1=yes||
-has_dependents_Yes     |  integer ( boolean 0,1)	| has dependent(s), children or otherwise, 0= no, 1=yes|
-has_phone_service_Yes |                    integer ( boolean 0,1)	| is or was a phone customer, 0= no, 1=yes|
-has_multiple_lines_No phone service |      integer ( boolean 0,1)	| didn’t or doesn’t have phone service, 0= no, 1=yes|
-has_multiple_lines_Yes   |                 integer ( boolean 0,1)	| has or had multiple phone lines, 0= no, 1=yes|
-has_online_security_Yes   |  integer ( boolean 0,1)| internet option: has or had service add-on, 0= no, 1=yes|
-has_online_backup_Yes  | integer ( boolean 0,1) | internet option: has or had service add-onr, 0= no, 1=yes|
-has_device_protection_Yes  |  integer ( boolean 0,1)|  internet option: has or had service add-on, 0= no, 1=yes|
-has_tech_support_Yes  |               integer ( boolean 0,1)	| internet option: has or had service add-on, 0= no, 1=yes|
-has_streaming_tv_Yes   |          integer ( boolean 0,1)	| internet option: has or had service add-on, 0= no, 1=yes|
-has_streaming_movies_Yes  |       integer ( boolean 0,1)	| internet option: has or had service add-on, 0= no, 1=yes|
-has_paperless_billing_Yes |    integer ( boolean 0,1)|  customer bill is or was paperless, 0= no, 1=yes |
-did_churn_Yes (target) |            integer ( boolean 0,1)	| customer services have been cancelled, 0= no, 1=yes|   
+is_male_Male         |   boolean int. (0, 1)	| binary gender identity 0= male, 1=female|  	
+has_partner_Yes    |                       boolean int. (0, 1)	| has spouse, partner, or significant other, 0= no, 1=yes||
+has_dependents_Yes     |  boolean int. (0, 1)	| has dependent(s), children or otherwise, 0= no, 1=yes|
+has_phone_service_Yes |                    boolean int. (0, 1)	| is or was a phone customer, 0= no, 1=yes|
+has_multiple_lines_No phone service |      boolean int. (0, 1)	| didn’t or doesn’t have phone service, 0= no, 1=yes|
+has_multiple_lines_Yes   |                 boolean int. (0, 1)	| has or had multiple phone lines, 0= no, 1=yes|
+has_online_security_Yes   |  boolean int. (0, 1)| internet option: has or had service add-on, 0= no, 1=yes|
+has_online_backup_Yes  | boolean int. (0, 1) | internet option: has or had service add-onr, 0= no, 1=yes|
+has_device_protection_Yes  |  boolean int. (0, 1)|  internet option: has or had service add-on, 0= no, 1=yes|
+has_tech_support_Yes  |               boolean int. (0, 1)	| internet option: has or had service add-on, 0= no, 1=yes|
+has_streaming_tv_Yes   |          boolean int. (0, 1)	| internet option: has or had service add-on, 0= no, 1=yes|
+has_streaming_movies_Yes  |       boolean int. (0, 1)	| internet option: has or had service add-on, 0= no, 1=yes|
+has_paperless_billing_Yes |    boolean int. (0, 1)|  customer bill is or was paperless, 0= no, 1=yes |
+did_churn_Yes (target) |            boolean int. (0, 1)	| customer services have been cancelled, 0= no, 1=yes|   
 contract_type_One year  |                  integer ( boolean 0,1|  customer has or did have 1 year contract, 0= no, 1=yes|
-contract_type_Two year  |                  integer ( boolean 0,1) | customer has or did have 2 year contract, 0= no, 1=yes|	
-internet_service_type_Fiber optic  | integer ( boolean 0,1)|  is or was a fiber optic internet customer,  0= no, 1=yes |
-internet_service_type_None     | integer ( boolean 0,1)| s or was an internet customer,  0= no, 1=yes |
-payment_type_Credit card (automatic)   |   integer ( boolean 0,1)	| payment type is or was credit card, 0= no, 1=yes |	
-payment_type_Electronic check     |        integer ( boolean 0,1)	| payment type is or was electronic check, 0= no, 1=yes |	
-payment_type_Mailed check       |          integer ( boolean 0,1)	| payment type is or was check via post, 0= no, 1=yes |	
+contract_type_Two year  |                  boolean int. (0, 1) | customer has or did have 2 year contract, 0= no, 1=yes|	
+internet_service_type_Fiber optic  | boolean int. (0, 1)|  is or was a fiber optic internet customer,  0= no, 1=yes |
+internet_service_type_None     | boolean int. (0, 1)| s or was an internet customer,  0= no, 1=yes |
+payment_type_Credit card (automatic)   |   boolean int. (0, 1)	| payment type is or was credit card, 0= no, 1=yes |	
+payment_type_Electronic check     |        boolean int. (0, 1)	| payment type is or was electronic check, 0= no, 1=yes |	
+payment_type_Mailed check       |          boolean int. (0, 1)	| payment type is or was check via post, 0= no, 1=yes |	
  
 
 
