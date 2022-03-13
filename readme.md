@@ -162,13 +162,15 @@ Using Jupyter Notebook
 - [x] Split data into train, validate, and test samples
  
 #### 4.EXPLORE
- - [x]
- - [x]
- - [x]
- - [x]
- - [x]
- - [x]
- - [x]
+Using Jupyter Notebook:
+- [x] Answer key questions about hypotheses and find drivers of churn
+  - Run at least two statistical tests
+  - Document findings
+- [x] Create visualizations with intent to discover variable relationships
+  - Identify variables related to churn
+  - Identify any potential data integrity issues
+- [x] Summarize conclusions, provide clear answers, and summarize takeaways
+  - Explain plan of action as deduced from work to this point
  
 #### 5. MODEL & EVALUATE
 Using Jupyter Notebook:
@@ -183,12 +185,16 @@ Using Jupyter Notebook:
 - [x] Interpret and document findings
  
 #### 6. DELIVERY
- - [x]
- - [x]
- - [x]
- - [x]
- - [x]
- - [x]
+- [x] Prepare five minute presentation using Jupyter Notebook
+- [x] Include introduction of project and goals
+- [x] Provide executive summary of findings, key takeaways, and recommendations
+- [x] Create walk through of analysis 
+  - Visualize relationships
+  - Document takeaways
+  - Explicitly define questions asked during initial analysis
+- [x] Provide final takeaways, recommend course of action, and next steps
+- [x] Be prepared to answer questions following presentation
+
  
  
 ## IV. MODULES:
@@ -200,10 +206,10 @@ Using Jupyter Notebook:
 ## V. REPRODUCIBILITY:
 ### Steps to Reproduce
  
-- [x] You will need an env.py file that contains the hostname, username, and password of the mySQL database that contains the telco_churn database.
-- [x] Store that env file locally in the repository.
-- [x] Make .gitignore and confirm .gitignore is hiding your env.py file.
+- [x] You will need an env.py file that contains the hostname, username, and password of the mySQL database that contains the telco_churn database
+- [x] Store that env file locally in the repository
+- [x] Make .gitignore and confirm .gitignore is hiding your env.py file
 - [x] Clone my repo (including the acquire.py and prepare.py)
-- [x] Import python libraries:  pandas, matplotlib, seaborn, numpy, and sklearn.
+- [x] Import python libraries:  pandas, matplotlib, seaborn, numpy, and sklearn
 - [x] Follow steps as outlined in the README.md. and Churn_Work.ipynb
-- [x] Run Churn_Report.ipynb to view the final product.
+- [x] Run Churn_Report.ipynb to view the final product
