@@ -1,77 +1,99 @@
-mport pandas as pd
+import pandas as pd
 import numpy as np
 import os
 
-from sklearn.impute import SimpleImputer
 from sklearn.model_selection import train_test_split
+
+import warnings
+warnings.filterwarnings("ignore")
 
 from acquire import get_telco_data
 
 
 
-
-def prep_telco(df):
+def clean_telco_data(df):
+    ''' 
+    This function takes in the telco data and cleans it
     '''
-    This function takes in a dataframe created from acquiring the telco dataset.
-    It drops unnecessary, unhelpful, or duplicated columns, such as 'customer_id', 
-    as well as columns that will be encoded, such as 'contract_type', 
-    'internet_service_type', and 'payment_type'.  It creates dummy columns that encode 
-    'object' type data into numeric values that can be more easily evaluated through 
-    the exploration process. It then adds the encoded columns to the dataframe. 
-    The function returns the updated dataframe.
-    '''
-    columns_to_drop = ['payment_type_id', 'internet_service_type_id', 'contract_type_id', 'customer_id']                   
-    df = df.drop(columns = columns_to_drop)
-    dummy_df = pd.get_dummies(df[['contract_type', 'internet_service_type', 'payment_type']],
-                          dummy_na=False,
-                         drop_first = [True, True, True])
-    df = pd.concat([df, dummy_df], axis=1)
-    return df
 
+    # change dtype in column from string so it can be used
+    df['total_charges'] = df.total_charges.replace(' ', np.nan).astype(float)
+    
+    # reassigning dataframe and dropping the null values from 'total_charges' column
+    df = df[df.tenure != 0]
 
-
-
-def summerize_df(df):
-    '''
-    This function takes in a dataframe and summarizes the data in preparation for cleaning. 
-    It uses .shape() to provide the number of rows and columns; .info() which in includes the 
-    index as well as the Series names, null values, and datatypes; .describe() which provides 
-    the summary statistics. It then provide a new dataframe, replacing empty spaces with NaN values, 
-    then gets a count of the NaN values for each Sereis. 
-    '''  
-    print('-----shape------')
-    print('{} rows and {} columns'.format(df.shape[0], df.shape[1]))
-    print('---info---')
-    print(df.info())
-    print(df.describe())
-    print('--nulls--')
-    df = df.replace(r'^\s*$', np.NaN, regex=True)
-    print(df.isna().sum())
-
-
+    #rename column names for clarity
+    df = df.rename(columns ={'gender': 'is_male', 'senior_citizen': 'is_senior', 'tenure': 'tenure_months',
+                                   'partner': 'has_partner', 'dependents': 'has_dependents',
+                                    'phone_service': 'has_phone_service','multiple_lines': 'has_multiple_lines', 
+                                    'online_security': 'has_online_security', 'online_backup': 'has_online_backup' , 
+                                    'device_protection': 'has_device_protection', 'tech_support': 'has_tech_support',
+                                   'streaming_tv': 'has_streaming_tv', 'streaming_movies': 'has_streaming_movies', 
+                                   'paperless_billing': 'has_paperless_billing', 'churn': 'did_churn'})
+    
+    
+    columns = ['is_male',
+               'has_partner',
+               'has_dependents',
+               'has_phone_service',
+               'has_multiple_lines',
+               'has_online_security',
+               'has_online_backup',
+               'has_device_protection',
+               'has_tech_support',
+               'has_streaming_tv',
+               'has_streaming_movies',
+               'has_paperless_billing',
+               'did_churn',
+               'contract_type',
+               'internet_service_type',
+               'payment_type'
+              ]
+    # get dummies for columns that have two values (yes,no) or gender, and dropping first
+    dummy_df = pd.get_dummies(df[columns], drop_first = True)
 
     
-def train_validate_test_split(df, seed=123):
-     '''
+    # combine df and dummy_df that I created
+    df = pd.concat([df, dummy_df], axis =1)
+
+    # dropping columns that are now duplicates, from the dummies created, or not needed
+    df = df.drop(columns = columns)
+    df = df.drop(columns = ['payment_type_id', 'internet_service_type_id', 'contract_type_id'])
+
+    
+    
+    return df     
+
+
+
+
+
+def data_split(df, random_state=123):
+    '''
     This function splits a dataframe into train, validate, and test 
-    in order to create and validate models. It takes in a dataframe 
-    and contains an integer for a setting a seed.  The name of the target 
-    variable (for stratification purposes), is included inside the function. 
+    in order to create and validate models. It takes in a dataframe. The  
+    target variable (for stratification purposes) is set within the function, 
+    and contains an integer for setting a seed for replication. 
     Test is 20% of the original dataset. The remaining 80% of the dataset is 
     divided between valiidate and train, with validate being .30*.80= 24% of 
     the original dataset, and train being .70*.80= 56% of the original dataset. 
     The function returns, train, validate and test dataframes. 
     '''
-    train_validate, test = train_test_split(df, test_size=0.2,
-        random_state=19, stratify=df.churn)
-    train, validate = train_test_split(train_validate, test_size=0.25,
-        random_state=19, stratify=train_validate.churn)
+    
+     
+    train, test = train_test_split(df, test_size = .2, random_state=123, stratify=df.did_churn_Yes)
+    
+   
+    train, validate = train_test_split(train, test_size=.3, random_state=123, stratify=train.did_churn_Yes)
 
+
+    print(f'train -> {train.shape}')
+    print(f'validate -> {validate.shape}')
+    print(f'test -> {test.shape}')
+    
+    # results in 3 dataframes
     return train, validate, test
-    train_validate, test = train_test_split(df, test_size=0.2, 
-                                            random_state=seed, 
-                                            stratify=df[target])
-    train, validate = train_test_split(train_validate, test_size=0.3, 
-                                       random_state=seed,
-                                       stratify=train_validate[target])
-    return train, validate, test
+
+
+
+    
