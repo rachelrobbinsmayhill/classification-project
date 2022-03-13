@@ -6,6 +6,22 @@ Codeup - Innis Cohort - March 2022
 Table of Contents
 ---
 
+* I. [Project Overview](##-I.-project_overview)<br>
+[1. Goals](#1-goal)<br>
+[2. Description](#)<br>
+[3. Summary](#3-summary)<br>
+* II. [Data Context](#ii-data-context)<br>
+[1. Database Relationship Map](#1-database-relationship)<br>
+[2. Data Dictionary](#2-data-dictionary)<br>
+* III. [Process](#)<br>
+[1. Project Planning](#2-acquire)<br>
+[2. Data Acquisition](#2-acquire)<br>
+[3. Data Preparation](#3-prepare)<br>
+[4. Data Exploration](#4explore)<br>
+[5. Modeling & Evaluation](#5-model--evaluate)<br>
+[6. Product Delivery](#6-product-delivery)<br>
+* IV. [Modules](#iv-modules)<br>
+* V. [Project Reproduction](#v-project-reproduction)<br>
 
 
 
@@ -49,8 +65,8 @@ The focus of the project is on decreasing customer churn and increasing retentio
 
 #### 4. Formulating hypotheses
 - Is month-to-month customer churn related to Fiber Optic Internet Service?
-+ [`H0: The churn rate of Month to month customers who have fiber optic internet <= the churn rate of all customers who have fiber optic internet.
-+ [`H1: The churn rate of Month to month customers who have fiber optic internet > the churn rate of all customers who have fiber optic internet.
+    + H0: The churn rate of Month to month customers who have fiber optic internet <= the churn rate of all customers who have fiber optic internet.
+    + H1: The churn rate of Month to month customers who have fiber optic internet > the churn rate of all customers who have fiber optic internet.
 
 
 
@@ -156,6 +172,16 @@ Split data into train, validate, and test samples
 
 
 #### 5. MODEL & EVALUATE
+In Jupyter Notebook:
+- [x] Establish baseline accuracy
+- [x] Train and fit multiple (3+) models with varying algorithms and/or hyperparameters
+- [x] Compare evaluation metrics across models
+- [x] Remove unnecessary features
+- [x] Evaluate best performing models using validate set
+- [x] Choose best performing validation model for use on test set
+- [x] Test final model on out-of-sample testing dataset
+  - Summarize performance
+  - Interpret and document findings
 
 
 #### 6. DELIVERY
