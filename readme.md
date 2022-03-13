@@ -8,27 +8,28 @@ Table of Contents
 
 * I. [Project Overview](##-I.-project_overview)<br>
 [1. Goals](#1-goal)<br>
-[2. Description](#)<br>
-[3. Summary](#3-summary)<br>
+[2. Description](#2-description)<br>
+[3. Initial Questions](#3initial-questions)<br>
+[4. Formulating Hypotheses](#4-formulating-hypotheses)<br>
+[5. Deliverables](#5-deliverables)<br>
 * II. [Data Context](#ii-data-context)<br>
-[1. Database Relationship Map](#1-database-relationship)<br>
-[2. Data Dictionary](#2-data-dictionary)<br>
-* III. [Process](#)<br>
-[1. Project Planning](#2-acquire)<br>
+[1. Data Dictionary](#1-data-dictionary)<br>
+* III. [Data Science Pipeline Process](#iii-data-science-pipeline-process)<br>
+[1. Project Planning](#1-plan)<br>
 [2. Data Acquisition](#2-acquire)<br>
 [3. Data Preparation](#3-prepare)<br>
 [4. Data Exploration](#4explore)<br>
 [5. Modeling & Evaluation](#5-model--evaluate)<br>
 [6. Product Delivery](#6-product-delivery)<br>
 * IV. [Modules](#iv-modules)<br>
-* V. [Project Reproduction](#v-project-reproduction)<br>
+* V. [Project Reproduction](#v-reproducibility)<br>
 
 
 
 ## I. PROJECT OVERVIEW
 
 
-#### 1.  Goal:
+#### 1.  GOAL:
 The goal of this project is to identify key drivers of churn for Telco, a telecommunications company, and make recommendations to reduce churn in order to increase customer retention, and ultimately increase revenue. Churn is another term for attrition and is represented by the percentage of customers who stop doing business with the company. Through machine learning and statistical analysis, predictions of future churn will be identified and recommendations for prevention will be made in order to improve customer retention.
 
 
@@ -63,7 +64,7 @@ The focus of the project is on decreasing customer churn and increasing retentio
 - What is my MVP?
 - How will I know it's good enough?
 
-#### 4. Formulating hypotheses
+#### 4. FORMULATING HYPOTHESES
 - Is month-to-month customer churn related to Fiber Optic Internet Service?
     + H0: The churn rate of Month to month customers who have fiber optic internet <= the churn rate of all customers who have fiber optic internet.
     + H1: The churn rate of Month to month customers who have fiber optic internet > the churn rate of all customers who have fiber optic internet.
@@ -83,7 +84,7 @@ The focus of the project is on decreasing customer churn and increasing retentio
 
 ## II. DATA CONTEXT
 
-## DATA DICTIONARY:
+#### 1. DATA DICTIONARY:
 
 The final DataFrame used to explore the data for this project contains the following variables (columns).  The variables, along with their data types, are defined below: 
 
@@ -122,7 +123,7 @@ payment_type_Mailed check       |          integer ( boolean 0,1)	| payment type
  
 
 
-## III. PROCESS:
+## III. DATA SCIENCE PIPELINE PROCESS:
 The following outlines the process taken through the Data Science Pipeline to complete this project.  
 
 Plan➜ Acquire ➜ Prepare ➜ Explore ➜ Model & Evaluate ➜ Deliver
@@ -154,18 +155,19 @@ Plan➜ Acquire ➜ Prepare ➜ Explore ➜ Model & Evaluate ➜ Deliver
 - [x] Store functions needed to prepare the Telco data such as:
     - [x] Split Function: to split data into train, validate, and test
     - [x] Cleaning Function: to clean data for exploration
-Encoding Function: to create numeric columns for object column
-Feature Engineering Function: to create new features
-Ensure all imports needed to run the functions are inside the prepare.py document
+    - [x] Encoding Function: to create numeric columns for object column
+    - [x] Feature Engineering Function: to create new features
+   
+- [x] Ensure all imports needed to run the functions are inside the prepare.py document
 Using Jupyter Notebook
-Import functions from prepare.py module
-Summarize dataset using methods and document observations
-Clean data
-Features need to be turned into numbers
-Categorical features or discrete features need to be numbers that represent those categories
-Continuous features may need to be standardized to compare like datatypes
-Address missing values, data errors, unnecessary data, renaming
-Split data into train, validate, and test samples
+- [x] Import functions from prepare.py module
+- [x] Summarize dataset using methods and document observations
+- [x] Clean data
+- [x] Features need to be turned into numbers
+- [x] Categorical features or discrete features need to be numbers that represent those categories
+- [x] Continuous features may need to be standardized to compare like datatypes
+- [x] Address missing values, data errors, unnecessary data, renaming
+- [x] Split data into train, validate, and test samples
 
 
 #### 4.EXPLORE
@@ -180,8 +182,8 @@ In Jupyter Notebook:
 - [x] Evaluate best performing models using validate set
 - [x] Choose best performing validation model for use on test set
 - [x] Test final model on out-of-sample testing dataset
-  - Summarize performance
-  - Interpret and document findings
+- [x] Summarize performance
+- [x] Interpret and document findings
 
 
 #### 6. DELIVERY
@@ -190,27 +192,26 @@ In Jupyter Notebook:
 
 ## IV. MODULES:
 
-Python Module File - provides reproducible code for acquiring,  preparing, exploring, & testing the data.
-acquire.py - used to acquire data
-prepare.py - used to prepare data
+- [x] Python Module Files - provide reproducible code for acquiring,  preparing, exploring, & testing the data.
+    - [x] acquire.py - used to acquire data
+    - [x] prepare.py - used to prepare data
 
 
 
 ## V. REPRODUCIBILITY: 
-	
 ### Steps to Reproduce
 
-You will need an env.py file that contains the hostname, username, and password of the mySQL database that contains the telco_churn database. 
+- [x] You will need an env.py file that contains the hostname, username, and password of the mySQL database that contains the telco_churn database. 
 
-Store that env file locally in the repository.
+- [x] Store that env file locally in the repository.
 
-Make .gitignore and confirm .gitignore is hiding your env.py file.
+- [x] Make .gitignore and confirm .gitignore is hiding your env.py file.
 
-Clone my repo (including the acquire.py and prepare.py) 
+- [x] Clone my repo (including the acquire.py and prepare.py) 
 
-Import python libraries:  pandas, matplotlib, seaborn, numpy, and sklearn.
+- [x] Import python libraries:  pandas, matplotlib, seaborn, numpy, and sklearn.
 
-Follow steps as outlined in the README.md. and Churn_Work.ipynb
+- [x] Follow steps as outlined in the README.md. and Churn_Work.ipynb
 
-Run Churn_Report.ipynb to view the final product.
+- [x] Run Churn_Report.ipynb to view the final product.
 
